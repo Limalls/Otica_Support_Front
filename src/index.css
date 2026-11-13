@@ -1,1 +1,131 @@
 @import "tailwindcss";
+
+@theme {
+  --color-carbon-black-50: #f3f2f2;
+  --color-carbon-black-100: #e6e5e5;
+  --color-carbon-black-200: #cdcbcb;
+  --color-carbon-black-300: #b4b1b1;
+  --color-carbon-black-400: #9b9797;
+  --color-carbon-black-500: #827d7d;
+  --color-carbon-black-600: #686464;
+  --color-carbon-black-700: #4e4b4b;
+  --color-carbon-black-800: #343232;
+  --color-carbon-black-900: #1a1919;
+  --color-carbon-black-950: #121111;
+
+  --color-pale-slate-50: #f2f1f4;
+  --color-pale-slate-100: #e6e2e9;
+  --color-pale-slate-200: #ccc5d3;
+  --color-pale-slate-300: #b3a9bc;
+  --color-pale-slate-400: #9a8ca6;
+  --color-pale-slate-500: #816f90;
+  --color-pale-slate-600: #675973;
+  --color-pale-slate-700: #4d4356;
+  --color-pale-slate-800: #332c3a;
+  --color-pale-slate-900: #1a161d;
+  --color-pale-slate-950: #121014;
+
+  --color-ghost-white-50: #e5e5ff;
+  --color-ghost-white-100: #ccccff;
+  --color-ghost-white-200: #9999ff;
+  --color-ghost-white-300: #6666ff;
+  --color-ghost-white-400: #3333ff;
+  --color-ghost-white-500: #0000ff;
+  --color-ghost-white-600: #0000cc;
+  --color-ghost-white-700: #000099;
+  --color-ghost-white-800: #000066;
+  --color-ghost-white-900: #000033;
+  --color-ghost-white-950: #000024;
+
+  --color-golden-pollen-50: #fff7e5;
+  --color-golden-pollen-100: #fff0cc;
+  --color-golden-pollen-200: #ffe099;
+  --color-golden-pollen-300: #ffd166;
+  --color-golden-pollen-400: #ffc233;
+  --color-golden-pollen-500: #ffb300;
+  --color-golden-pollen-600: #cc8f00;
+  --color-golden-pollen-700: #996b00;
+  --color-golden-pollen-800: #664700;
+  --color-golden-pollen-900: #332400;
+  --color-golden-pollen-950: #241900;
+
+  --color-orange-50: #fff4e5;
+  --color-orange-100: #ffeacc;
+  --color-orange-200: #ffd599;
+  --color-orange-300: #ffbf66;
+  --color-orange-400: #ffaa33;
+  --color-orange-500: #ff9500;
+  --color-orange-600: #cc7700;
+  --color-orange-700: #995900;
+  --color-orange-800: #663c00;
+  --color-orange-900: #331e00;
+  --color-orange-950: #241500;
+}
+
+
+/* Animações do navbar */
+@theme {
+  --animate-borda: borda 3.5s linear infinite;
+  --animate-sobe: sobe 0.45s ease-out;
+  --animate-pop: pop 0.35s ease-out;
+
+  @keyframes borda {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes sobe {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.4);
+    }
+    60% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* degrade */
+.busca-borda {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-golden-pollen-500),
+    var(--color-orange-500),
+    var(--color-golden-pollen-500),
+    var(--color-orange-500),
+    var(--color-golden-pollen-500)
+  );
+  background-size: 200% 100%;
+}
+
+
+/* celufone */
+@theme {
+  --animate-abre: abre 0.35s ease-out;
+
+  @keyframes abre {
+    from {
+      clip-path: inset(0 0 0 100%);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
