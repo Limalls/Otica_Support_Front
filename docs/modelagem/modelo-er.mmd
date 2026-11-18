@@ -1,0 +1,53 @@
+erDiagram
+    CLIENTE ||--o{ AGENDAMENTO : "marca"
+    CLIENTE ||--o{ PEDIDO : "faz"
+    PEDIDO ||--|{ ITEM_PEDIDO : "contem"
+    PRODUTO ||--o{ ITEM_PEDIDO : "aparece em"
+
+    CLIENTE {
+        int id PK
+        varchar nome
+        varchar email UK
+        varchar telefone
+    }
+
+    AGENDAMENTO {
+        int id PK
+        int cliente_id FK
+        datetime data_hora
+        varchar status "agendado, confirmado, cancelado, concluido"
+        text observacao
+    }
+
+    PRODUTO {
+        int id PK
+        varchar nome
+        text descricao
+        decimal preco
+        int estoque
+        varchar categoria
+        varchar imagem_url
+        boolean ativo
+    }
+
+    PEDIDO {
+        int id PK
+        int cliente_id FK
+        varchar status "pendente, pago, enviado, entregue, cancelado"
+        decimal total
+        datetime criado_em
+    }
+
+    ITEM_PEDIDO {
+        int id PK
+        int pedido_id FK
+        int produto_id FK
+        int quantidade
+        decimal preco_unitario
+    }
+
+    USUARIO {
+        int id PK
+        varchar email UK
+        varchar senha_hash "login do dono da otica"
+    }
