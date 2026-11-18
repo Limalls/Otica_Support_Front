@@ -17,7 +17,7 @@ Site de uma ótica para **vender óculos de sol online** e **agendar consultas d
 
 Vendas e agendamento
 
-**[Nome da trilha]**
+**[Vendas e agendamento]**
 
 ## O problema que o sistema resolve
 
